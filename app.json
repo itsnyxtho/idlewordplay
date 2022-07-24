@@ -1,0 +1,85 @@
+{
+  "text": "",
+  "formats": [
+    {
+      "screen": {
+        "record format name": "myScreen"
+      },
+      "items": [
+        {
+          "id": "Layout1",
+          "field type": "layout",
+          "left": "0px",
+          "top": "0px",
+          "template": "responsive layout",
+          "height": "100%",
+          "width": "100%",
+          "layout items": "5",
+          "style rules": "@media screen { #_id_ > .puiresp { display:grid; grid-template-rows:50px 1fr; grid-template-columns:1fr repeat(3, 50px); padding-top:32px; padding-right:32px; padding-bottom:32px; padding-left:32px; box-sizing:border-box; } #_id_ > .puiresp > div:nth-of-type(5) { grid-column-end:span 4; } #_id_ > .puiresp > div { box-sizing:border-box; } } ",
+          "use viewport": "true"
+        },
+        {
+          "id": "Icon1",
+          "field type": "icon",
+          "css class": "iwp--icon",
+          "left": "5px",
+          "top": "5px",
+          "icon": "material:restore",
+          "height": "40px",
+          "width": "40px",
+          "css class 2": "iwp--icon--restart",
+          "layout": "Layout1",
+          "container": "4"
+        },
+        {
+          "id": "Icon1_copy",
+          "field type": "icon",
+          "css class": "iwp--icon",
+          "icon": "material:play_circle_outline",
+          "left": "5px",
+          "top": "5px",
+          "height": "40px",
+          "width": "40px",
+          "css class 2": "iwp--icon--play",
+          "layout": "Layout1",
+          "container": "2"
+        },
+        {
+          "id": "Icon1_copy2",
+          "field type": "icon",
+          "css class": "iwp--icon",
+          "icon": "material:pause_circle_outline",
+          "left": "5px",
+          "top": "5px",
+          "height": "40px",
+          "width": "40px",
+          "css class 2": "iwp--icon--pause",
+          "layout": "Layout1",
+          "container": "3"
+        },
+        {
+          "id": "Icon1_copy3",
+          "field type": "icon",
+          "icon": "material:face",
+          "left": "65px",
+          "top": "10px",
+          "layout": "Layout1",
+          "container": "4"
+        },
+        {
+          "id": "_name",
+          "field type": "output field",
+          "css class": "iwp--heading",
+          "value": "Idle Wordplay",
+          "left": "5px",
+          "top": "5px",
+          "height": "40px",
+          "layout": "Layout1",
+          "container": "1"
+        }
+      ]
+    }
+  ],
+  "keywords": [],
+  "long name aliases": true
+}

@@ -1,0 +1,15 @@
+{
+  "sequence": 10,
+  "template name": "Blank Page",
+  "template category": "No Code / Low Code",
+  "description": "Rich Display application",
+  "image": "/cloud/template-icons/blank_page.png",
+  "routes": {},
+  "app start": "app.json",
+  "template dir": "blank-page",
+  "current git repository": "",
+  "git repositories": [
+    ""
+  ],
+  "idx": 0
+}
