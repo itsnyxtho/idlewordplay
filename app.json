@@ -3,23 +3,28 @@
   "formats": [
     {
       "screen": {
-        "record format name": "myScreen"
+        "record format name": "myScreen",
+        "external css": "public/css/style.css",
+        "external javascript": "public/scripts/idlewordplay.js",
+        "external javascript 2": "public/scripts/scripts.js"
       },
       "items": [
         {
           "id": "Layout1",
           "field type": "layout",
-          "left": "0px",
-          "top": "0px",
           "template": "responsive layout",
           "height": "100%",
           "width": "100%",
           "layout items": "5",
-          "style rules": "@media screen { #_id_ > .puiresp { display:grid; grid-template-rows:50px 1fr; grid-template-columns:1fr repeat(3, 50px); padding-top:32px; padding-right:32px; padding-bottom:32px; padding-left:32px; box-sizing:border-box; } #_id_ > .puiresp > div:nth-of-type(5) { grid-column-end:span 4; } #_id_ > .puiresp > div { box-sizing:border-box; } } ",
-          "use viewport": "true"
+          "style rules": "@media screen { #_id_ > .puiresp { display:grid; grid-template-rows:50px 1fr; grid-template-columns:1fr repeat(3, 50px); padding-top:32px; padding-right:32px; padding-bottom:32px; padding-left:32px; box-sizing:border-box; } #_id_ > .puiresp > div:nth-of-type(5) { grid-column-end:span 4; } #_id_ > .puiresp > div { box-sizing:border-box; } #_id_ > .puiresp > div:nth-of-type(1) { overflow-x:visible; overflow-y:visible; } } ",
+          "use viewport": "true",
+          "max width": "720px",
+          "center horizontally": "true",
+          "max height": "965px",
+          "center vertically": "true"
         },
         {
-          "id": "Icon1",
+          "id": "iwp_reset",
           "field type": "icon",
           "css class": "iwp--icon",
           "left": "5px",
@@ -28,11 +33,12 @@
           "height": "40px",
           "width": "40px",
           "css class 2": "iwp--icon--restart",
+          "onclick": "iwp__onReset();",
           "layout": "Layout1",
           "container": "4"
         },
         {
-          "id": "Icon1_copy",
+          "id": "iwp_play",
           "field type": "icon",
           "css class": "iwp--icon",
           "icon": "material:play_circle_outline",
@@ -41,11 +47,12 @@
           "height": "40px",
           "width": "40px",
           "css class 2": "iwp--icon--play",
+          "onclick": "iwp__onPlay();",
           "layout": "Layout1",
           "container": "2"
         },
         {
-          "id": "Icon1_copy2",
+          "id": "iwp_pause",
           "field type": "icon",
           "css class": "iwp--icon",
           "icon": "material:pause_circle_outline",
@@ -54,6 +61,7 @@
           "height": "40px",
           "width": "40px",
           "css class 2": "iwp--icon--pause",
+          "onclick": "iwp__onPause();",
           "layout": "Layout1",
           "container": "3"
         },
@@ -69,13 +77,23 @@
         {
           "id": "_name",
           "field type": "output field",
-          "css class": "iwp--heading",
+          "css class": "iwp--title",
           "value": "Idle Wordplay",
-          "left": "5px",
-          "top": "5px",
-          "height": "40px",
+          "height": "100%",
           "layout": "Layout1",
           "container": "1"
+        },
+        {
+          "id": "time",
+          "field type": "html container",
+          "left": "10px",
+          "top": "10px",
+          "white space": "normal",
+          "width": "340px",
+          "height": "75px",
+          "color": "white",
+          "layout": "Layout1",
+          "container": "5"
         }
       ]
     }
